@@ -15,7 +15,7 @@ export default defineNuxtConfig({
 		BASE_DIRECTORY: process.env.BASE_DIRECTORY,
 		CIIC_MODE: process.env.CIIC_MODE,
 		// Never use CMS_SITE from .env. Instead, rely on `set-locale` to determine this from the i18n package.
-		CMS_SITE: null,
+		// CMS_SITE: null,
 
 		// Public config data
 		public: {
