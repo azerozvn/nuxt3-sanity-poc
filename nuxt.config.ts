@@ -47,7 +47,7 @@ export default defineNuxtConfig({
 		}
 	},
 
- // Move all buildModules to modules
+	// Move all buildModules to modules
 	// Need to update pointing to an index entry file
 	// instead of directory
 	// modules: [
