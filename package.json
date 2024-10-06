@@ -12,6 +12,7 @@
   "dependencies": {
     "@nuxtjs/sanity": "^1.12.2",
     "nuxt": "^3.13.0",
+    "pinia": "^2.2.4",
     "vue": "latest",
     "vue-router": "latest"
   },
