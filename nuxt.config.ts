@@ -15,6 +15,9 @@ export default defineNuxtConfig({
 		SITE_CATEGORY: process.env.SITE_CATEGORY,
 		BASE_DIRECTORY: process.env.BASE_DIRECTORY,
 		CIIC_MODE: process.env.CIIC_MODE,
+
+		SANITY_PROJECT_ID: process.env.SANITY_PROJECT_ID,
+		SANITY_DATASET: process.env.SANITY_DATASET,
 		// Never use CMS_SITE from .env. Instead, rely on `set-locale` to determine this from the i18n package.
 		// CMS_SITE: null,
 
@@ -66,7 +69,7 @@ export default defineNuxtConfig({
 
 	sanity: {
 		projectId: process.env.SANITY_PROJECT_ID,
-		dataset: process.env.SANITY_DATASET
+		dataset: process.env.SANITY_DATASET,
 	},
 
 	// Does not take a function to return conditional plugins
@@ -77,7 +80,9 @@ export default defineNuxtConfig({
 		transpile: ['instantsearch'] 
 	},
 
-	
+	routeRules: {
+		'/admin/**': { ssr: false }
+	},
 
  // Need to understand how nitro replace generate
 	// Need to config Netlify appDir
