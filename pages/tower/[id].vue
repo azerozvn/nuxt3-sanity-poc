@@ -7,12 +7,11 @@
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<script lang='ts'>
+<script setup>
 
-export default {
-	name: 'Tower',
-
-}
+name: 'Tower'
+const query = groq`*[_type == "post"]`
+const { data } = await useSanityQuery(query)
 
 </script>
 
