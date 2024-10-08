@@ -3,9 +3,10 @@ import { appDir } from './nuxt-app/data/settings'
 import { isTrue } from './nuxt-app/lib/helpers'
 
 export default defineNuxtConfig({
- devtools: { enabled: true },
+	devtools: { enabled: true },
+	compatibilityDate: '2024-10-06',
 
- runtimeConfig: {
+	runtimeConfig: {
 		// App env
 		APP_ENV: process.env.APP_ENV,
 		ALGOLIA_APP_ENV: process.env.ALGOLIA_APP_ENV,
@@ -50,7 +51,8 @@ export default defineNuxtConfig({
 	// Move all buildModules to modules
 	// Need to update pointing to an index entry file
 	// instead of directory
-	// modules: [
+	modules: [
+		'@nuxtjs/sanity'
 	// 	'vue-ssr-carousel/nuxt',
 	// 	'~/modules/ssg-i18n-routes',
 	// 	'~/modules/ssg-work-hub-homepages',
@@ -60,7 +62,12 @@ export default defineNuxtConfig({
 	// 	'@cloak-app/copy',
 	// 	'@cloak-app/visual',
 	// 	'@nuxtjs/firebase',
-	// ],
+	],
+
+	sanity: {
+		projectId: process.env.SANITY_PROJECT_ID,
+		dataset: process.env.SANITY_DATASET
+	},
 
 	// Does not take a function to return conditional plugins
 	// plugins: getPlugins(isTrue(process.env.CIIC_MODE)),
@@ -69,6 +76,8 @@ export default defineNuxtConfig({
 		// Transpile instantsearch to JS/ES6
 		transpile: ['instantsearch'] 
 	},
+
+	
 
  // Need to understand how nitro replace generate
 	// Need to config Netlify appDir
@@ -162,8 +171,6 @@ export default defineNuxtConfig({
 			dir: `dist${appDir}`
 		}
 	},
-
- compatibilityDate: '2024-10-06'
 })
 
 function getPageTypenames(ciicMode: boolean) {
