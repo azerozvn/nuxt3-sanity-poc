@@ -2,6 +2,8 @@
 
 .tower
 	h1 This is a tower page
+	h2 {{ data[0].title }}
+
 
 </template>
 
