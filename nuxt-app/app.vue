@@ -14,7 +14,6 @@
 
 <script setup lang="ts">
 const route = useRoute()
-const { enabled: previewEnabled, inFrame } = useSanityVisualEditingState()
 </script>
 
 <style>
