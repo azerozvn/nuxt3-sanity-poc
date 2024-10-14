@@ -186,6 +186,14 @@ export default defineNuxtConfig({
 			dir: `dist${appDir}`
 		}
 	},
+
+	vite: {
+		css: {
+			preprocessorOptions: {
+				stylus: {}
+			}
+		}
+	}
 })
 
 function getPageTypenames(ciicMode: boolean) {

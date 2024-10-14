@@ -25,6 +25,8 @@
     "@sanity/types": "^3.50.0",
     "@types/node": "^18.17.14",
     "coffeescript": "^2.7.0",
-    "pug": "^3.0.3"
+    "pug": "^3.0.3",
+    "stylus": "^0.63.0",
+    "stylus-loader": "^8.1.1"
   }
 }

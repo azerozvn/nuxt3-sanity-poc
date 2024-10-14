@@ -18,3 +18,9 @@ const { data: posts } = await useSanityQuery<Post[]>(query)
 </script>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+<style lang="stylus" scoped>
+
+.posts 
+	background #d7d7d7
+
+</style>
