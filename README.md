@@ -1,5 +1,9 @@
 # Nuxt3 Sanity Demo
 
+## Env
+
+[Generate a token](https://www.sanity.io/docs/http-auth#4c21d7b829fe) with read permissions for env
+
 ## Development
 
 ```bash
