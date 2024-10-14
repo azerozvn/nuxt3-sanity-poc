@@ -9,6 +9,7 @@ header.header
 			li: nuxt-link(to='/') Home
 			li: nuxt-link(to='/about') About
 			li: nuxt-link(to='/post') Post
+			li: nuxt-link(to='/admin') Admin
 
 </template>
 
