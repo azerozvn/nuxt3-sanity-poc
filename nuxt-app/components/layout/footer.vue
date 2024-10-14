@@ -2,19 +2,19 @@
 
 <template lang='pug'>
 
-.default-layout
-	layout-header
-	main: nuxt-page
-	layout-footer
+footer.footer
+	p &copy; 2024 Goodness
 
 </template>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<script lang='ts'>
-export default {
-	name: 'DefaultLayout'
-}
+<script setup lang="ts">
+const route = useRoute()
 </script>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
+
+<style lang="stylus" scoped>
+
+</style>
