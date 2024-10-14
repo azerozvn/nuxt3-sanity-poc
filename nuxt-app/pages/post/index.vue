@@ -1,19 +1,19 @@
 <template lang='pug'>
 
-.tower
-	h1 This is a tower page
-	h2 {{ data[0].title }}
-
+.posts
+	card(v-for='post in posts || []' :key='post.id' :post='post')
+	p(v-if='!posts?.length') There is no post
 
 </template>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
-<script setup>
+<script setup lang="ts">
+import { type Post } from '/types/Post'
 
-name: 'Tower'
+name: 'Post'
 const query = groq`*[_type == "post"]`
-const { data } = await useSanityQuery(query)
+const { data: posts } = await useSanityQuery<Post[]>(query)
 
 </script>
 

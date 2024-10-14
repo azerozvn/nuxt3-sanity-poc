@@ -80,7 +80,10 @@ export default defineNuxtConfig({
 	},
 
 	// Does not take a function to return conditional plugins
-	// plugins: getPlugins(isTrue(process.env.CIIC_MODE)),
+	plugins: [
+		'~/plugins/sanity/sanity-image'
+		// getPlugins(isTrue(process.env.CIIC_MODE)),
+	],
 
 	build: {
 		// Transpile instantsearch to JS/ES6
