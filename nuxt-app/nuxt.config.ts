@@ -1,6 +1,6 @@
-import { locales } from './nuxt-app/data/locales'
-import { appDir } from './nuxt-app/data/settings'
-import { isTrue } from './nuxt-app/lib/helpers'
+import { locales } from './nuxt-app-2.6/data/locales'
+import { appDir } from './nuxt-app-2.6/data/settings'
+import { isTrue } from './nuxt-app-2.6/lib/helpers'
 
 export default defineNuxtConfig({
 	devtools: { enabled: true },
@@ -70,6 +70,13 @@ export default defineNuxtConfig({
 	sanity: {
 		projectId: process.env.SANITY_PROJECT_ID,
 		dataset: process.env.SANITY_DATASET,
+		useCdn: true, // `false` if you want to ensure fresh data
+    apiVersion: process.env.SANITY_API_VERSION || '2024-03-15',
+    visualEditing: {
+      studioUrl: process.env.SANITY_STUDIO_URL || 'http://localhost:3333',
+      token: process.env.SANITY_API_READ_TOKEN,
+      stega: true,
+    },
 	},
 
 	// Does not take a function to return conditional plugins
