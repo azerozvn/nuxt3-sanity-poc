@@ -23,4 +23,6 @@ logs
 .env.*
 !.env.example
 
+# Nuxt 2.6 app
 nuxt-app-2.6
+.nuxt.config.ts
