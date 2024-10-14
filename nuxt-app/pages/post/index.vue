@@ -13,10 +13,15 @@
 <script setup lang="ts">
 import { type Post } from '/types/Post'
 
-name: 'Post'
 const query = groq`*[_type == "post"]`
 const { data: posts } = await useSanityQuery<Post[]>(query)
 
+</script>
+
+<script lang="ts">
+export default {
+	name: 'Posts'
+}
 </script>
 
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->

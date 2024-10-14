@@ -31,6 +31,12 @@ function formatDate(date: string) {
 }
 </script>
 
+<script lang="ts">
+export default {
+	name: 'Card'
+}
+</script>
+
 <!-- ––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––––– -->
 
 <style lang="stylus" scoped>
