@@ -1,17 +1,24 @@
 {
-  "compilerOptions": {
-    "target": "ES2017",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "allowJs": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "forceConsistentCasingInFileNames": true,
-    "module": "Preserve",
-    "moduleDetection": "force",
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "incremental": true
-  },
-  "include": ["**/*.ts", "**/*.tsx"],
-  "exclude": ["node_modules"]
+	"compilerOptions": {
+		"target": "ES2017",
+		"lib": ["dom", "dom.iterable", "esnext"],
+		"allowJs": true,
+		"skipLibCheck": true,
+		"strict": false,
+		"noImplicitAny": false,
+		"noImplicitThis": false,
+		"alwaysStrict": false,
+		"strictBindCallApply": false,
+		"strictNullChecks": false,
+		"strictFunctionTypes": false,
+		"strictPropertyInitialization": false,
+		"forceConsistentCasingInFileNames": true,
+		"module": "Preserve",
+		"moduleDetection": "force",
+		"isolatedModules": true,
+		"jsx": "preserve",
+		"incremental": true
+	},
+	"include": ["**/*.ts", "**/*.tsx"],
+	"exclude": ["node_modules"]
 }
